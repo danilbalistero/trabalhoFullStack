@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 
 class Pessoa extends Model { }
 
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize) => {
     Pessoa.init({
         id: {
             type: DataTypes.INTEGER,
