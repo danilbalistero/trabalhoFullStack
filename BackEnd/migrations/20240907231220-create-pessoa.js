@@ -6,10 +6,11 @@ module.exports = {
     const { DataTypes } = Sequelize;
     await queryInterface.createTable('pessoa', {
       id: {
-        allowNull: false,
-        autoIncrement: true,
+        type: DataTypes.INTEGER,
         primaryKey: true,
-        type: DataTypes.INTEGER
+        autoIncrement: true,
+        allowNull: false,
+        
       },
       nome: {
         type: DataTypes.STRING,
@@ -23,14 +24,6 @@ module.exports = {
         type: DataTypes.STRING,
         allowNull: false
       },
-      created_at: {
-        allowNull: false,
-        type: DataTypes.DATE
-      },
-      updated_at: {
-        allowNull: false,
-        type: DataTypes.DATE
-      }
     });
   },
 
